@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetector">
+    <phpmd_settings>
+      <MessDetectorConfiguration tool_path="/usr/share/pear/bin/phpmd" />
+    </phpmd_settings>
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="." />
+      <path value="/usr/share/pear" />
+      <path value="/usr/share/pear/Smarty" />
+      <path value="$USER_HOME$/Sites/www.meertens.dev/html/kaart/v3/pear" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.3.0" />
+</project>

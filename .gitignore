@@ -1,1 +1,3 @@
-Dockerfile
+.idea
+.DS_Store
+*.gz

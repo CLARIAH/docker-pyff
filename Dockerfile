@@ -10,15 +10,14 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
+ADD pyFF-1.0.1.patch.tar.gz /tmp/
 RUN pip3 install setuptools
 RUN pip3 install --upgrade pip
-RUN pip3 install ${PACKAGE}
-RUN pip3 install --upgrade pipdeptree pykcs11 ${EXTRA_PACKAGES}
+RUN pip3 install /tmp/pyFF-1.0.1
+RUN pip3 install --upgrade pipdeptree pykcs11 
 RUN pipdeptree
 EXPOSE 8080
 ADD start.sh /start.sh
 ADD debug.ini /
 ADD warn.ini /
-ADD mdx.fd /mdx.fd
-RUN chmod a+x /start.sh
-ENTRYPOINT ["/start.sh"]
+# continued in private repo
